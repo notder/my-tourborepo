@@ -14,8 +14,13 @@ jobs:
       test-chunks: ${{ steps['set-test-chunks'].outputs['test-chunks'] }}
       test-chunk-ids: ${{ steps['set-test-chunk-ids'].outputs['test-chunk-ids'] }}
     env:
-      TESTS_NUM_CHUNKS: 3
+      TESTS_NUM_CHUNKS: 1
     steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
       - id: set-test-chunks
         run: |
           ./scripts/generate-chunks.mjs
