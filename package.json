@@ -15,12 +15,12 @@
   },
   "devDependencies": {
     "eslint-config-custom": "*",
+    "lerna": "^6.0.1",
     "prettier": "latest",
     "turbo": "latest"
   },
   "engines": {
     "node": ">=14.0.0"
   },
-  "dependencies": {},
   "packageManager": "yarn@1.22.17"
 }
